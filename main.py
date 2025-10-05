@@ -22,7 +22,7 @@ async def on_ready():
         print(f"Error syncing commands: {e}")
 
 @bot.tree.command(name="entropy", description="Returns a random number between range")
-async def roll(interaction: discord.Interaction, max: int, min: int = 1):
+async def entropy(interaction: discord.Interaction, max: int, min: int = 1):
     if max < min:
         await interaction.response.send_message("⚠️ Max must be greater than or equal to Min!", ephemeral=True)
         return
